@@ -94,7 +94,7 @@
 
 		states.forEach(function(d){ 
 			var cnt = state_2_count[d]
-			areaInfo[d]={low: cnt, color:d3.interpolate("#ecf0fc", "#4169e1")(cnt/380)}; 
+			areaInfo[d]={low: cnt, color:d3.interpolate("#ecf0fc", "#4169e1")(Math.log(cnt,10)/10)}; 
 	 	});
 	
 		uStates.draw("#statesvg", areaInfo, tooltipHtml);
